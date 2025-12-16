@@ -1,9 +1,10 @@
 #include <stdio.h>
-
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
 int main()
 {
     int N;
-    printf("Enter a 4-digit number:");
     scanf("%d",&N);
     int a,b,c,d;
     int d1,d2,d3,d4;
@@ -86,20 +87,20 @@ int main()
         }
         else if(b>=a && b>=d){
             d2=b;
-            if(b>=d){
-                d3=b;d4=d;
+            if(a>=d){
+                d3=a;d4=d;
             }
             else{
-                d3=d;d4=b;
+                d3=d;d4=a;
             }
         }
         else if(d>=a && d>=b){
             d2=d;
-            if(a>=c){
-                d3=a;d4=c;
+            if(a>=b){
+                d3=a;d4=b;
             }
             else{
-                d3=c;d4=a;
+                d3=b;d4=a;
             }
         }
         
@@ -117,11 +118,11 @@ int main()
         }
         else if(b>=a && b>=c){
             d2=b;
-            if(b>=c){
-                d3=b;d4=c;
+            if(a>=c){
+                d3=a;d4=c;
             }
             else{
-                d3=c;d4=b;
+                d3=c;d4=a;
             }
         }
         else if(c>=a && c>=b){
